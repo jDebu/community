@@ -8,7 +8,7 @@ Por la ruta donde se guarde el archivo csv
 
 Y luego ejecutar en la consola
 
-python -u E:\home\leer_csv.py
+python -u (ruta de leer_csv.py)\leer_csv.py
 
 (carga la data del excel)
 
