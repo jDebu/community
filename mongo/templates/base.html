@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>My Tumblelog</title>
+    <link href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.css" rel="stylesheet">
+    <style>.content {padding-top: 80px;}</style>
+  </head>
+
+  <body>
+
+    <div class="topbar">
+      <div class="fill">
+        <div class="container">
+          <h1><a href="/" class="brand">Mi Blog</a>! <small>Empezando con MongoDB y Django-MongoDB.</small></h1>
+          <a href="http://docs.mongodb.org/manual/tutorial/write-a-tumblelog-application-with-django-mongodb-engine/"><p align="right">django-nonrel 1.3</p> </a> 
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="container">
+      <div class="content">
+        {% block page_header %}{% endblock %}
+        {% block content %}{% endblock %}
+      </div>
+    </div>
+
+  </body>
+</html>

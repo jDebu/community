@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% for post in posts_list %}
+      <h2><a href="{% url post slug=post.slug %}">{{ post.title }}</a></h2>
+      <p>{{ post.body|truncatewords:20 }}</p>
+      <p>
+        {{ post.created_at }} |
+        {% with total=post.comments|length %}
+            {{ total }} comment{{ total|pluralize }}
+        {% endwith %}
+      </p>
+    {% endfor %}
+{% endblock %}
+

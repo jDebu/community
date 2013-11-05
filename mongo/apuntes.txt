@@ -1,0 +1,31 @@
+fuente:
+http://docs.mongodb.org/manual/tutorial/write-a-tumblelog-application-with-django-mongodb-engine/
+
+instalar un django personalizado para mongodb
+-requirimiento tener pip o bajarse de los siguientes urls y con buscar la raiz de setup.py
+python setup.py install para todos los urls siguientes en la página de arriba estan sino
+busquen por su nombre en google
+django-nonrel
+djangotoolbox
+mongodb-engine 
+
+pip install https://bitbucket.org/wkornewald/django-nonrel/get/tip.tar.gz
+pip install https://bitbucket.org/wkornewald/djangotoolbox/get/tip.tar.gz
+pip install https://github.com/django-nonrel/mongodb-engine/tarball/master
+------------------------------------
+Para sacar superusuario ...ojo tiene q haber solo 1 (al probar dos user con admin y pass diferent(uno super y otro un user normal)) me salia error
+from django.contrib.auth.models import User
+us=User.objects.get_or_create(username='admin')
+
+o                            username,email,password 
+us=User.objects.create_user('admin','admin@eee.com','admin')
+us.is_staff = True
+us.is_superuser = True
+us.save()
+
+adicional
+us=User.objects.all()
+us[0].set_password('123');#change password
+us[0].save()
+us[0].delete() #lo borro
+
